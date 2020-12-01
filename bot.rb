@@ -8,13 +8,25 @@ bot.get_updates(fail_silently: true) do |message|
   
     message.reply do |reply|
       case command
+      # /start
       when /start/i
-        reply.text = "All I can do is say hello. Try the /greet command."
+        reply.text = "All I can do is say hello. Try the /greet and /download command."
+      # /greet
       when /greet/i
         reply.text = "Hello, #{message.from.first_name}. 🤖"
       else
         reply.text = "I have no idea what #{command.inspect} means."
       end
+      when /download/i
+        reply.text = "
+        Link Download kebutuhan opersional TH : /link_download_it
+        "\n"
+        WARP 1.1.1. : /warp
+        "
+      when /link_download_it/i
+        reply.text = "bit.ly/itjabar atau s.id/itjabar"
+      when /warp/i
+        reply.text = "1.1.1.1/beta"
       puts "sending #{reply.text.inspect} to @#{message.from.username}"
       reply.send_with(bot)
     end
