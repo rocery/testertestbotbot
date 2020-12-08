@@ -25,6 +25,7 @@ bot.get_updates(fail_silently: true) do |message|
           Ryfan : @Ryfan_ITrainer
           Sastra : @Sastra_ITrainer
           "
+          reply.text = "Just TEst"
         when /downloadSoftware/i
           reply.text = "
           Software Operasional : s.id/itjabar atau bit.ly/itjabar
